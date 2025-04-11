@@ -1,0 +1,24 @@
+{
+  "name": "gatsby-yarn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gatsby-yarn",
+  "author": "Rohit Mungre",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.14.1",
+    "gatsby-plugin-postcss": "^6.14.0",
+    "postcss": "^8.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
