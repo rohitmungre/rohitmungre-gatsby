@@ -5,7 +5,7 @@ tags: ["Poem"]
 template: "post"
 slug: "abdd"
 comments_off: true
-categories: ["Tutorial", "React"]
+categories: ["Tutorial", "React", "Technical"]
 thumbnail: "../thumbnails/apple.png"
 description: "This is a blog post about Gatsby GraphQL errors."
 ---
