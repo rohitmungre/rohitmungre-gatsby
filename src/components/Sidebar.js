@@ -20,7 +20,7 @@ export const Sidebar = () => {
   const guides = [
     {
       url: '/setting-up-a-brand-new-mac-for-development',
-      title: 'macOS Setup for Devs',
+      title: 'WSL Setup for Devs',
       icon: mac,
     },
     {
@@ -30,12 +30,12 @@ export const Sidebar = () => {
     },
     {
       url: '/react-architecture-directory-structure',
-      title: 'React Architecture',
+      title: 'Modern Python Apps',
       icon: react,
     },
     {
       url: '/asynchronous-javascript-event-loop-callbacks-promises-async-await/',
-      title: 'The Event Loop',
+      title: 'Async programming',
       icon: js,
     },
     {
@@ -88,11 +88,11 @@ export const Sidebar = () => {
               <img
                 src={floppyLogo}
                 className="sidebar-logo"
-                alt="tania.dev"
+                alt="rohitmungre"
                 title="💾"
               />
             </span>
-            <span>tania.dev</span>
+            <span>Rohit Mungre</span>
           </Link>
         </div>
         <div className="sidebar-container">
@@ -100,8 +100,8 @@ export const Sidebar = () => {
             <h2>About Me</h2>
             <div className="sidebar-content">
               <p>
-                I'm <Link to="/me">Tania</Link>, software engineer and
-                open-source creator. This is my digital garden. 🌱
+                I'm <Link to="/me">Rohit</Link>, software engineer and
+                creator. This is my digital garden. 🌱
               </p>
             </div>
           </section>
@@ -110,7 +110,7 @@ export const Sidebar = () => {
             <h2>Stay Connected</h2>
             <p className="sidebar-links">
               <a
-                href="https://taniarascia.substack.com"
+                href="https://rohitmungre.substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -118,12 +118,12 @@ export const Sidebar = () => {
                 Newsletter
               </a>
               <a
-                href="https://go.bsky.app/SmEWb8G"
+                href="https://x.com/rohitmungre"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img src={bluesky} alt="Bluesky" />
-                Bluesky Starter Pack
+                Twitter
               </a>
               <a href="/rss.xml">
                 <img src={rss} alt="RSS" />

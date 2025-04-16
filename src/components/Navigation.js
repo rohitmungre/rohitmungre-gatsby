@@ -13,15 +13,20 @@ import { Menu } from '../assets/Menu'
 import { Close } from '../assets/Close'
 
 const links = [
-  { url: '/notes', label: 'Notes', image: blog },
-  { url: '/blog', label: 'Blog', image: projects },
-  { url: '/projects', label: 'Projects', image: github },
-  { url: '/me', label: 'About', image: floppy },
+  { url: '/notes', label: 'Notes', image: null },
+  { url: '/blog', label: 'Blog', image: null },
+  { url: '/me', label: 'About', image: null },
 ]
 
+// const links1 = [
+//   { url: '/projects', label: '', image: github },
+//   { url: '/me', label: '', image: floppy },
+// ]
+
+
 const socialLinks = [
-  { url: 'https://github.com/taniarascia' },
-  { url: 'https://bsky.app/profile/tania.dev' },
+  { url: 'https://github.com/rohitmungre' },
+  { url: 'https://x.com/rohitmungre' },
 ]
 
 export const Navigation = ({ handleUpdateTheme, theme }) => {
@@ -44,14 +49,15 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
               <img
                 src={floppyLogo}
                 className="sidebar-logo"
-                alt="tania.dev"
+                alt="rohitmungre"
                 title="💾"
               />
             </span>
-            <span>tania.dev</span>
+            <span>Rohit Mungre</span>
           </Link>
         </div>
       </div>
+
       <div className="navbar-wrapper">
         <div className="navbar-container">
           <section className="navbar-section navbar-section-search" />
@@ -64,6 +70,7 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
             >
               {navOpen ? <Close /> : <Menu />}
             </button>
+
             <nav className={`navbar-menu nav-items ${navOpen ? 'active' : ''}`}>
               {links.map((link) => (
                 <Link
@@ -72,22 +79,12 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
                   activeClassName="active"
                   onClick={handleCloseMobileNav}
                 >
-                  <img src={link.image} alt={link.label} />
+                  {link.image && <img src={link.image} alt={link.label} />}
                   {link.label}
                 </Link>
               ))}
             </nav>
             <nav className="navbar-menu social">
-              <button
-                className="navbar-button theme-switch-button"
-                onClick={() => {
-                  const newTheme = theme === 'dark' ? 'light' : 'dark'
-
-                  handleUpdateTheme(newTheme)
-                }}
-              >
-                {theme === 'dark' ? <Sun /> : <Moon />}
-              </button>
               {socialLinks.map((link) => (
                 <SocialIcon
                   target="_blank"
@@ -98,6 +95,16 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
                   className="navbar-icon"
                 />
               ))}
+              <button
+                className="navbar-button theme-switch-button"
+                onClick={() => {
+                  const newTheme = theme === 'dark' ? 'light' : 'dark'
+
+                  handleUpdateTheme(newTheme)
+                }}
+              >
+                {theme === 'dark' ? <Sun /> : <Moon />}
+              </button>
             </nav>
           </section>
         </div>
