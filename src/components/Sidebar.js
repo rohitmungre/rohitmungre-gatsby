@@ -25,7 +25,7 @@ export const Sidebar = () => {
     },
     {
       url: '/overview-of-css-concepts/',
-      title: 'CSS Guidebook',
+      title: 'Rust Guidebook',
       icon: css,
     },
     {
