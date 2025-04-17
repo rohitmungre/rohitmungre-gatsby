@@ -1090,7 +1090,10 @@ a.sidebar-title-link {
 
 .hero-image {
   display: none;
+  /* width: 205px; */
   max-width: 125px;
+  position: relative;
+  top: -70px;
 }
 
 @media screen and (min-width: 600px) {

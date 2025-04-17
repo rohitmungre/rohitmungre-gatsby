@@ -39,8 +39,8 @@ export default function Index({ data }) {
           <div className="hero-wrapper">
             <div>
               <p className="hero-description">
-                I'm a software engineer, open-source creator, and former
-                professional chef. I've been making websites since 1998 and{' '}
+                I’m a quantitative software developer based in London, United Kingdom. 
+                I've been making websites since 1998 and{' '}
                 <Link to="/blog">writing on this blog</Link> for the past
                 decade.
               </p>
@@ -64,7 +64,7 @@ export default function Index({ data }) {
               </p>
             </div>
             <div>
-              <img src="/ram.png" className="hero-image" alt="RAM Ram" />
+              <img src="/wadp2.png" className="hero-image" alt="RAM Ram" />
             </div>
           </div>
         </Hero>
