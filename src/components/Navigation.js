@@ -13,7 +13,7 @@ import { Menu } from '../assets/Menu'
 import { Close } from '../assets/Close'
 
 const links = [
-  { url: '/notes', label: 'Notes', image: null },
+  // { url: '/notes', label: 'Notes', image: null },
   { url: '/blog', label: 'Blog', image: null },
   { url: '/me', label: 'About', image: null },
 ]

@@ -47,34 +47,34 @@ export const Sidebar = () => {
   const projectWriteups = [
     {
       url: '/musical-instrument-web-audio-api',
-      title: 'Keyboard Accordion',
+      title: 'Losing 31 at 33',
       icon: accordion,
     },
     {
       url: '/how-to-create-a-memory-game-super-mario-with-plain-javascript',
-      title: 'SNES Memory Game',
+      title: 'Starting up v/s PhD',
       icon: mario,
     },
     {
       url: '/writing-an-emulator-in-javascript-chip8/',
-      title: 'Chip-8 Emulator',
+      title: 'Oil markets',
       icon: js,
     },
     {
       url: '/building-takenote',
-      title: 'TakeNote App',
+      title: 'Gaming industry',
       icon: tn,
     },
   ]
   const funStuff = [
     {
       url: '/animorphs',
-      title: 'The Lore of Animorphs',
+      title: 'Gallery',
       icon: animorphs,
     },
     {
       url: '/building-my-first-pc/',
-      title: 'Building My First PC',
+      title: 'Art',
       icon: pc,
     },
   ]
@@ -107,6 +107,46 @@ export const Sidebar = () => {
           </section>
 
           <section className="sidebar-section">
+            <h2>Writeups</h2>
+            <nav className="sidebar-menu">
+              {projectWriteups.map((link) => (
+                <Link key={link.url} to={link.url} activeClassName="active">
+                  {link.icon && <img src={link.icon} alt={link.title} />}
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
+          </section>
+
+          <section className="sidebar-section">
+            <h2>Guides</h2>
+            <nav className="sidebar-menu">
+              {guides.map((link) => (
+                <Link key={link.url} to={link.url} activeClassName="active">
+                  {link.icon ? (
+                    <img src={link.icon} alt={link.title} />
+                  ) : (
+                    <div style={{ height: '16px', width: '16px' }} />
+                  )}
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
+          </section>
+
+          <section className="sidebar-section">
+            <h2>Fun Stuff</h2>
+            <nav className="sidebar-menu">
+              {funStuff.map((link) => (
+                <Link key={link.url} to={link.url} activeClassName="active">
+                  {link.icon && <img src={link.icon} alt={link.title} />}
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
+          </section>
+
+          <section className="sidebar-section">
             <h2>Stay Connected</h2>
             <p className="sidebar-links">
               <a
@@ -131,46 +171,7 @@ export const Sidebar = () => {
               </a>
             </p>
           </section>
-
-          <section className="sidebar-section">
-            <h2>Guides</h2>
-            <nav className="sidebar-menu">
-              {guides.map((link) => (
-                <Link key={link.url} to={link.url} activeClassName="active">
-                  {link.icon ? (
-                    <img src={link.icon} alt={link.title} />
-                  ) : (
-                    <div style={{ height: '16px', width: '16px' }} />
-                  )}
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </section>
-
-          <section className="sidebar-section">
-            <h2>Project Writeups</h2>
-            <nav className="sidebar-menu">
-              {projectWriteups.map((link) => (
-                <Link key={link.url} to={link.url} activeClassName="active">
-                  {link.icon && <img src={link.icon} alt={link.title} />}
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </section>
-
-          <section className="sidebar-section">
-            <h2>Fun Stuff</h2>
-            <nav className="sidebar-menu">
-              {funStuff.map((link) => (
-                <Link key={link.url} to={link.url} activeClassName="active">
-                  {link.icon && <img src={link.icon} alt={link.title} />}
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </section>
+          
         </div>
       </div>
     </aside>

@@ -69,7 +69,7 @@ export default function Index({ data }) {
           </div>
         </Hero>
 
-        <section className="section-index">
+        {/* <section className="section-index">
           <Heading
             title="Notes"
             slug="/notes"
@@ -77,11 +77,11 @@ export default function Index({ data }) {
             description="Personal notes about life, music, projects, and everything else."
           />
           <Posts data={notes} newspaper />
-        </section>
+        </section> */}
 
         <section className="section-index">
           <Heading
-            title="Tech Blog"
+            title="Blog"
             slug="/blog"
             buttonText="See All"
             description="Guides, references, and tutorials."

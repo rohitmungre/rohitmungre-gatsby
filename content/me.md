@@ -1,5 +1,5 @@
 ---
-title: "Blue"
+title: "About me"
 date: "2013-10-19"
 tags: ["Poem"]
 template: "page"
@@ -7,39 +7,24 @@ slug: "me"
 categories: ["Tutorial", "React"]
 thumbnail: "../thumbnails/apple.png"
 description: "This is a blog post about Gatsby GraphQL errors."
-
 ---
 
-## The Zen of Python
+Over the past 13 years, I have developed expertise in building quantitative and analytical systems across industries including investment banking, hedge funds, commodity trading, and gaming. My work has involved designing pricing models, creating high-performance trading systems, integrating real-time data, and building scalable microservices-based platforms. I have deployed and managed applications on Kubernetes and enhanced observability using Grafana, Prometheus, and Loki.
 
-One of the most influential and elegantly written guidelines in the world of programming. A reminder that programming is not just about getting things to work, it's also about doing so in a way that is clean, logical, and elegant. I find it quite philosophical and applicable to other areas in life as well. 
+At Onyx Capital Group, I designed pricing models, built trading & risk management systems, and architected scalable microservices for an OTC trading platform. Additionally, I implemented statistical outlier detection frameworks and enhanced observability systems.
 
-> Beautiful is better than ugly.  
-> Explicit is better than implicit.  
->  
-> Simple is better than complex.  
-> Complex is better than complicated.  
->  
-> Flat is better than nested.  
-> Sparse is better than dense.  
->  
-> Readability counts.  
-> Special cases aren't special enough to break the rules.  
->  
-> Although practicality beats purity.  
-> Errors should never pass silently.  
-> Unless explicitly silenced.  
->  
-> In the face of ambiguity, refuse the temptation to guess.  
-> There should be one-- and preferably only one --obvious way to do it.  
-> Although that way may not be obvious at first unless you're Dutch.  
->  
-> Now is better than never.  
-> Although never is often better than *right* now.  
->  
-> If the implementation is hard to explain, it's a bad idea.  
-> If the implementation is easy to explain, it may be a good idea.  
-> Namespaces are one honking great idea -- let's do more of those.  
+During my tenure at Squarepoint Capital, I led the development of a quantitative analytical library for fixed income instruments, generating various kinds of yield curves and pricing fixed income instruments like bonds, swaps etc.
 
-— *Tim Peters*  
+While working with Deutsche Bank, I spearheaded quantitative development for Corporate Bank solutions managing over 100 Billion EUR worth of current accounts, implemented analytics for liquidity stress methodology, and built tools for efficient risk management.
 
+My early experience at Bwin.Party Digital Entertainment involved developing backend systems for real-time multiplayer gaming, enhancing bonus systems, and ensuring seamless data processing.
+
+## Education
+
+**Master of Technology (Information & Communication Technology)** – Indian Institute of Technology, Delhi (2008 – 2013)  
+**Bachelor of Technology (Electrical Engineering)** – Indian Institute of Technology, Delhi (2008 – 2013)
+
+## Achievements
+
+- Published U.S. patent titled "Visual Descriptors Based Video Quality Assessment Using Outlier Model" (USPTO Publication No. US20150078654 A1, March 19, 2015)
+- Received Gold Medal at Indian National Physics Olympiad 2008, awarded to top 25 students in India
