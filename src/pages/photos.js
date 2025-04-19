@@ -7,18 +7,22 @@ import { Hero } from '../components/Hero'
 import { PageLayout } from '../components/PageLayout'
 import config from '../utils/config'
 
+
 const images = [
-  { url: '/illustrations/Ram.png', title: 'RAM Ram' },
-  { url: '/illustrations/Kohaku.png', title: 'Kohaku River' },
-  { url: '/illustrations/Slurms.png', title: 'Slurms MacKenzie' },
-  { url: '/illustrations/Charizard.png', title: 'Charizard' },
-  { url: '/illustrations/MechaRam.png', title: 'Mecha Ram' },
-  { url: '/illustrations/Squirtle.png', title: 'Squirtle' },
-  { url: '/illustrations/Wartortle.png', title: 'Wartortle' },
-  { url: '/illustrations/Blastoise.png', title: 'Blastoise' },
-  { url: '/illustrations/Oddish.png', title: 'Oddish' },
-  { url: '/illustrations/Bulbasaur.png', title: 'Bulbasaur' },
+  { url: '/photos/thames-kayak.jpg', title: 'Big Ben' },
+  { url: '/photos/sunset-hoola.jpg', title: 'Calvin & Hobbs' },
+  { url: '/photos/seagull.jpg', title: 'Mother earth' },
+  { url: '/photos/seven-sisters.jpg', title: 'Girl' },
+  { url: '/photos/cornwall.jpg', title: 'Colorful Skull' },
+  { url: '/photos/paris-sunset.jpg', title: 'Joker' },
+  { url: '/photos/rainy-day.jpg', title: 'Joker' },
+  { url: '/photos/notting-hill.jpg', title: 'Joker' },
+  { url: '/photos/sunset-hoola.jpg', title: 'Joker' },
+  { url: '/photos/edi-2.jpg', title: 'Joker' },
+  { url: '/photos/eiffel.jpg', title: 'Joker' },
+  { url: '/photos/hyde-park.jpg', title: 'Joker' },
 ]
+
 
 export default function Photos() {
   const title = 'Photos'
@@ -31,7 +35,18 @@ export default function Photos() {
       <PageLayout>
         <Hero
           title={title}
-          description="I don't draw much, but here's a few illustrations."
+          description={
+            <>
+              Below are a few selected photographs I’ve taken over the years. <br /> For more recent updates, feel free to follow me on{' '}
+              <a
+                href="https://instagram.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>.
+            </>
+          }
         />
 
         <div className="cards">

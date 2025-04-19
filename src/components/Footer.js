@@ -1,6 +1,6 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
-import netlify from '../../content/thumbnails/netlify.png'
 import gatsby from '../assets/gatsby.png'
 import github from '../assets/nav-github.png'
 
@@ -13,10 +13,17 @@ const links = [
 const madeWithLinks = [
   { url: 'https://www.gatsbyjs.org', label: 'Gatsby', icon: gatsby },
   { url: 'https://github.com/rohitmungre', label: 'GitHub', icon: github },
-  { url: 'https://www.netlify.com', label: 'Netlify', icon: netlify },
 ]
 
 export const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        buildTime(formatString: "MMMM D, YYYY [at] h:mm A")
+      }
+    }
+  `)
+
   return (
     <footer className="footer">
       <section className="footer-section">
@@ -48,7 +55,21 @@ export const Footer = () => {
             </a>
           ))}
         </nav>
-        <div className="footer-made-by">Made with ❤️ & ☕ by Rohit Mungre</div>
+                
+        <div className="footer-build-time">
+          Last build: {data.site.buildTime}
+        </div>
+        
+        <div className="footer-made-by">
+          Made with ❤️ & ☕ by Rohit Mungre
+        </div>
+
+        <div className="footer-made-by">
+          Based on a template by <a href="https://github.com/taniarascia/taniarascia.com" target="_blank" rel="noopener noreferrer">Tania Rascia</a>
+        </div>
+
+        <div className="footer-made-by">© 2013-2025 Rohit Mungre</div>
+
       </section>
     </footer>
   )

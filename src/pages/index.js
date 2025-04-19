@@ -35,19 +35,24 @@ export default function Index({ data }) {
       <SEO />
 
       <PageLayout>
-        <Hero title="Hey, I'm Rohit!" type="index">
+        <Hero title="Hey, I'm Rohit! 👋" type="index">
           <div className="hero-wrapper">
             <div>
               <p className="hero-description">
-                I’m a quantitative software developer based in London, United Kingdom. 
-                I've been making websites since 1998 and{' '}
-                <Link to="/blog">writing on this blog</Link> for the past
-                decade.
+                I’m a passionate quantitative software developer based in London, UK. 
               </p>
               <p className="hero-description">
-                I enjoy weight-lifting, reading sci-fi and fantasy, playing
-                retro video games, and spending time with my partner and
-                friends.
+                I've been programming since 2001 and over the past 13 years, have 
+                built quantitative analytical systems across various industries, including investment banking, 
+                hedge funds, commodity trading, and gaming. 
+              </p>
+              <p className="hero-description">
+                This space is where I share my thoughts, insights and work through blog posts 
+                covering a range of topics that interest me.
+              </p>
+              <p className="hero-description">
+                I enjoy sports, strength-training, cooking, music, 
+                and spending time with my partner and friends.
               </p>
               <p className="flex gap">
                 <Link className="button" to="/me">
@@ -64,7 +69,7 @@ export default function Index({ data }) {
               </p>
             </div>
             <div>
-              <img src="/wadp2.png" className="hero-image" alt="RAM Ram" />
+              <img src="/bw_dp4.png" className="hero-image" alt="RAM Ram" />
             </div>
           </div>
         </Hero>
@@ -220,7 +225,7 @@ export const pageQuery = graphql`
     highlights: allMarkdownRemark(
       limit: 12
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { categories: { eq: "Technical" } } }
+      filter: { frontmatter: { categories: { eq: "Deep Dive" } } }
     ) {
       edges {
         node {

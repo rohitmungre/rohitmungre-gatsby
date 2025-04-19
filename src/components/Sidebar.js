@@ -1,42 +1,45 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import floppy from '../assets/floppylogo.png'
-import react from '../../content/thumbnails/react.png'
-import css from '../../content/thumbnails/css-new.png'
-import js from '../../content/thumbnails/js.png'
-import mac from '../../content/thumbnails/apple.png'
-import mario from '../../content/thumbnails/mario.png'
-import tn from '../../content/thumbnails/tn.png'
-import accordion from '../../content/images/keyboardaccordionlogo.png'
-import animorphs from '../../content/thumbnails/animorphslogo.png'
+import floppy from '../assets/luffy.png'
+import book from '../../content/thumbnails/book.svg'
+import run from '../../content/thumbnails/run.svg'
+import gaming from '../../content/thumbnails/gaming.svg'
+import search from '../../content/thumbnails/search.svg'
+import oil from '../../content/thumbnails/oil.svg'
+import python from '../../content/thumbnails/python.svg'
+import sync from '../../content/thumbnails/sync.svg'
+import windows from '../../content/thumbnails/windows.svg'
+import programming from '../../content/thumbnails/programming.svg'
+import gallery from '../../content/thumbnails/gallery.png'
 import pc from '../../content/thumbnails/computer.png'
-import bluesky from '../../content/thumbnails/bluesky.png'
-import rss from '../../content/thumbnails/rss.png'
+import twitter from '../../content/thumbnails/twitter.svg'
+import rss from '../../content/thumbnails/rss.svg'
+import newsletter from '../../content/thumbnails/newsletter.svg'
 
-import floppyLogo from '../assets/nav-floppy.png'
+import floppyLogo from '../assets/happy.svg'
 
 export const Sidebar = () => {
   const guides = [
     {
-      url: '/setting-up-a-brand-new-mac-for-development',
-      title: 'WSL Setup for Devs',
-      icon: mac,
-    },
-    {
-      url: '/overview-of-css-concepts/',
-      title: 'Rust Guidebook',
-      icon: css,
-    },
-    {
-      url: '/react-architecture-directory-structure',
+      url: '/modern%20python%20applications',
       title: 'Modern Python Apps',
-      icon: react,
+      icon: python,
     },
     {
-      url: '/asynchronous-javascript-event-loop-callbacks-promises-async-await/',
+      url: '/why%20rust',
+      title: 'Rust Guidebook',
+      icon: programming,
+    },
+    {
+      url: '/asynchronous',
       title: 'Async programming',
-      icon: js,
+      icon: sync,
+    },
+    {
+      url: '/wsl%20setup',
+      title: 'WSL Setup for Devs',
+      icon: windows,
     },
     {
       url: '/topics',
@@ -46,34 +49,34 @@ export const Sidebar = () => {
 
   const projectWriteups = [
     {
-      url: '/musical-instrument-web-audio-api',
-      title: 'Losing 31 at 33',
-      icon: accordion,
-    },
-    {
-      url: '/how-to-create-a-memory-game-super-mario-with-plain-javascript',
-      title: 'Starting up v/s PhD',
-      icon: mario,
-    },
-    {
-      url: '/writing-an-emulator-in-javascript-chip8/',
+      url: '/oil',
       title: 'Oil markets',
-      icon: js,
+      icon: oil,
     },
     {
-      url: '/building-takenote',
+      url: '/gaming%20industry/',
       title: 'Gaming industry',
-      icon: tn,
+      icon: gaming,
+    },
+    {
+      url: '/weight%20loss/',
+      title: 'Losing 31 kilograms',
+      icon: run,
+    },
+    {
+      url: '/startup%20vs%20phd/',
+      title: 'Starting up v/s PhD',
+      icon: search,
     },
   ]
   const funStuff = [
     {
-      url: '/animorphs',
+      url: '/photos',
       title: 'Gallery',
-      icon: animorphs,
+      icon: gallery,
     },
     {
-      url: '/building-my-first-pc/',
+      url: '/illustration',
       title: 'Art',
       icon: pc,
     },
@@ -154,7 +157,7 @@ export const Sidebar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={floppy} alt="Email Newsletter" />
+                <img src={newsletter} alt="Email Newsletter" />
                 Newsletter
               </a>
               <a
@@ -162,7 +165,7 @@ export const Sidebar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={bluesky} alt="Bluesky" />
+                <img src={twitter} alt="Twitter" />
                 Twitter
               </a>
               <a href="/rss.xml">
