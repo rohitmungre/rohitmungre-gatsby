@@ -1,18 +1,18 @@
 ---
-title: "Blue"
-date: "2013-10-19"
+title: "Zen of Python"
+date: "2013-12-17"
 tags: ["Poem"]
-template: "page"
-slug: "abc"
-categories: ["Tutorial", "React"]
+template: "post"
+slug: "zen of python"
+categories: ["Tutorial", "React", "Technical"]
 thumbnail: "../thumbnails/apple.png"
 description: "This is a blog post about Gatsby GraphQL errors."
-
+tags: [Poem, Python]
 ---
 
-## The Zen of Python
+One of the most influential and elegantly written guidelines in the world of programming. A reminder that programming is not just about getting things to work, it's also about doing so in a way that is clean, logical, and elegant. 
 
-One of the most influential and elegantly written guidelines in the world of programming. A reminder that programming is not just about getting things to work, it's also about doing so in a way that is clean, logical, and elegant. I find it quite philosophical and applicable to other areas in life as well. 
+Quite philosophical and applicable to other areas in life at times. 
 
 > Beautiful is better than ugly.  
 > Explicit is better than implicit.  

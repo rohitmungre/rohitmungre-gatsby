@@ -39,20 +39,26 @@ export default function Index({ data }) {
           <div className="hero-wrapper">
             <div>
               <p className="hero-description">
-                I’m a passionate quantitative software developer based in London, UK. 
+                I’m a passionate software developer and quantitative trader based in London, UK.
+                I've been programming since 2001 and, over the past 13 years, have 
+                developed trading and analytical systems for leading institutions across investment banking, 
+                hedge funds, commodity trading, and gaming. My&nbsp;
+                <a href="https://www.linkedin.com/in/rohitmungre" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>.
               </p>
               <p className="hero-description">
-                I've been programming since 2001 and over the past 13 years, have 
-                built quantitative analytical systems across various industries, including investment banking, 
-                hedge funds, commodity trading, and gaming. 
+                I enjoy sports, strength-training, cooking, 
+                and spending time with my partner and friends. 
+                I'm also trained in Indian classical music and occasionally <a href="/illustration"> paint</a>. 
+                More recently, I've been focused on health and have <a href="/weight%20loss"> lost 31 Kilograms </a> so far. 
               </p>
               <p className="hero-description">
-                This space is where I share my thoughts, insights and work through blog posts 
+
+              </p>
+              <p className="hero-description">
+                This space is where I share my thoughts, insights and work through <a href="/blog"> blog posts </a> 
                 covering a range of topics that interest me.
-              </p>
-              <p className="hero-description">
-                I enjoy sports, strength-training, cooking, music, 
-                and spending time with my partner and friends.
               </p>
               <p className="flex gap">
                 <Link className="button" to="/me">

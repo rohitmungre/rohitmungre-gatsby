@@ -27,11 +27,6 @@ export const Sidebar = () => {
       icon: python,
     },
     {
-      url: '/why%20rust',
-      title: 'Rust Guidebook',
-      icon: programming,
-    },
-    {
       url: '/asynchronous',
       title: 'Async programming',
       icon: sync,

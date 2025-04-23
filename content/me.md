@@ -9,22 +9,50 @@ thumbnail: "../thumbnails/apple.png"
 description: "This is a blog post about Gatsby GraphQL errors."
 ---
 
-Over the past 13 years, I have developed expertise in building quantitative and analytical systems across industries including investment banking, hedge funds, commodity trading, and gaming. My work has involved designing pricing models, creating high-performance trading systems, integrating real-time data, and building scalable microservices-based platforms. I have deployed and managed applications on Kubernetes and enhanced observability using Grafana, Prometheus, and Loki.
+Hey, I'm Rohit! 
+I’m a London-based quantitative software developer with experience building high-performance trading and analytical systems. 
+My work sits at the intersection of quantitative modeling, software engineering, and product design.
+Over the years, I’ve architected and delivered complex systems for leading institutions across investment banking, hedge funds, commodities market making, and the gaming industry (my [LinkedIn](https://www.linkedin.com/in/rohitmungre)). 
 
-At Onyx Capital Group, I designed pricing models, built trading & risk management systems, and architected scalable microservices for an OTC trading platform. Additionally, I implemented statistical outlier detection frameworks and enhanced observability systems.
+My experience includes:
+- Designing trading system architecture for real-time OTC trade execution 
+- Developing quant analytics library supporting yield curve construction
+- Automating real-time hedging and risk management
+- Implementing pricing, risk, and execution models 
+- Machine learning for modelling market behavior 
+- Engineering low-latency, high-throughput compute pipelines
 
-During my tenure at Squarepoint Capital, I led the development of a quantitative analytical library for fixed income instruments, generating various kinds of yield curves and pricing fixed income instruments like bonds, swaps etc.
+This site is a blend of personal journal, professional updates, and a way to stake my corner of the internet. I built it while learning React — with AI as a co-pilot along the way.
+Sign up for the [newsletter](https://rohitmungre.substack.com) or subscribe to the [RSS](/rss.xml) feed for updates!
 
-While working with Deutsche Bank, I spearheaded quantitative development for Corporate Bank solutions managing over 100 Billion EUR worth of current accounts, implemented analytics for liquidity stress methodology, and built tools for efficient risk management.
 
-My early experience at Bwin.Party Digital Entertainment involved developing backend systems for real-time multiplayer gaming, enhancing bonus systems, and ensuring seamless data processing.
+## Contact
+Send me an email to say hi, or connect via the socials.
 
-## Education
+- Email: hi@rohitmungre.com
+- [newsletter](https://rohitmungre.substack.com)
+- [GitHub](https://github.com/rohitmungre)
+- [Twitter](https://x.com/rohitmungre)
 
-**Master of Technology (Information & Communication Technology)** – Indian Institute of Technology, Delhi (2008 – 2013)  
-**Bachelor of Technology (Electrical Engineering)** – Indian Institute of Technology, Delhi (2008 – 2013)
+## Tools 
 
-## Achievements
+### Tech Stack
+- **Python**: Primary language for rapid development, leveraging its rich ecosystem of libraries
+- **Rust**: For building performance-critical components requiring low latency and memory safety 
+- **React**: Frontend framework of choice for building responsive, component-driven UIs
+- **Docker**: For containerizing applications and ensuring environment consistency
+- **kubernetes**: For orchestrating and managing containerized microservices at scale
+- **Postgres**: Relational database for structured data, logs, and analytics storage 
+- **Redis**: High-speed caching, session storage, and real-time pub/sub messaging 
+- **Kafka**: For scalable data streaming and event-driven architecture 
+- **Bash/zsh**: For scripting, automation, environment setup, and system-level file operations
 
-- Published U.S. patent titled "Visual Descriptors Based Video Quality Assessment Using Outlier Model" (USPTO Publication No. US20150078654 A1, March 19, 2015)
-- Received Gold Medal at Indian National Physics Olympiad 2008, awarded to top 25 students in India
+### Software
+- **Development**: Visual Studio Code 
+- **Terminal**: WezTerm
+- **Notes**: Obsidian 
+
+## Miscellaneous
+
+- [Art](/illustration)
+- [Gallery](/photos)
