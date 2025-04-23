@@ -16,6 +16,29 @@ const madeWithLinks = [
 ]
 
 export const Footer = () => {
+  const scrollToTop = () => {
+    const duration = 1000; // in milliseconds
+    const start = window.scrollY;
+    const startTime = performance.now();
+
+    const easeInOutQuad = (t) =>
+      t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+    const scroll = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = easeInOutQuad(progress);
+      window.scrollTo(0, start * (1 - ease));
+
+      if (elapsed < duration) {
+        requestAnimationFrame(scroll);
+      }
+    };
+
+    requestAnimationFrame(scroll);
+  };
+
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -27,48 +50,55 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <section className="footer-section">
-        <nav className="footer-menu">
-          {links.map((link) => (
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={link.url}
-              className="footer-link"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-        <nav className="footer-menu-buttons">
-          {madeWithLinks.map((link) => (
-            <a
-              href={link.url}
-              title={link.label}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={link.url}
-              className="button small"
-            >
-              <img src={link.icon} alt={link.label} />
-              <span>{link.label}</span>
-            </a>
-          ))}
-        </nav>
-                
-        <div className="footer-build-time">
-          Last build: {data.site.buildTime}
-        </div>
-        
-        <div className="footer-made-by">
-          Made with ❤️ & ☕ by Rohit Mungre
+
+        <div className="footer-item">
+          <nav className="footer-menu">
+            {links.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={link.url}
+                className="footer-link"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <div className="footer-item-right">
+            <a href="#" onclick="scrollToTop(); return false;" class="back-to-top">↑ Back to Top</a>
+          </div>
         </div>
 
-        <div className="footer-made-by">
-          Based on a template by <a href="https://github.com/taniarascia/taniarascia.com" target="_blank" rel="noopener noreferrer">Tania Rascia</a>
+        <div className="footer-item">
+          <nav className="footer-menu-buttons">
+            {madeWithLinks.map((link) => (
+              <a
+                href={link.url}
+                title={link.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={link.url}
+                className="button small"
+              >
+                <img src={link.icon} alt={link.label} />
+                <span>{link.label}</span>
+              </a>
+            ))}
+          </nav>
+        </div> 
+
+        <div className="footer-item">
+          <div className="footer-item-left">
+            Made with ❤️ & ☕ by Rohit Mungre
+          </div>
         </div>
 
-        <div className="footer-made-by">© 2013-2025 Rohit Mungre</div>
+        <div className="footer-item">
+          <div className="footer-item-left">
+            Last build: {data.site.buildTime}
+          </div>
+        </div>
 
       </section>
     </footer>

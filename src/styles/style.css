@@ -1435,7 +1435,7 @@ img.image-float {
   }
 }
 
-/* Commets */
+/* Comments */
 
 .comments {
   margin-top: 1.5rem;
@@ -1450,6 +1450,7 @@ img.image-float {
   padding: 1.5rem 0;
   font-size: 13px;
 }
+
 
 a.footer-link {
   white-space: nowrap;
@@ -1470,6 +1471,25 @@ a.footer-link {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+
+.footer-item-left,
+.footer-item-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-item-right {
+  justify-content: flex-end;
 }
 
 .footer-section {
