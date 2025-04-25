@@ -1,7 +1,6 @@
 ---
 title: "Zen of Python"
 date: "2013-12-17"
-tags: ["Poem"]
 template: "post"
 slug: "zen of python"
 categories: ["Tutorial", "React", "Technical"]
