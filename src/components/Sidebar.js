@@ -82,14 +82,6 @@ export const Sidebar = () => {
       <div className="sidebar-wrapper">
         <div className="sidebar-title">
           <Link to="/" className="sidebar-title-link">
-            <span>
-              <img
-                src={floppyLogo}
-                className="sidebar-logo"
-                alt="rohitmungre"
-                title="💾"
-              />
-            </span>
             <span>Rohit Mungre</span>
           </Link>
         </div>

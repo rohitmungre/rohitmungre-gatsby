@@ -45,14 +45,6 @@ export const Navigation = ({ handleUpdateTheme, theme }) => {
       <div className="navbar-title">
         <div className="navbar-title-content">
           <Link to="/" className="navbar-title-link">
-            <span>
-              <img
-                src={floppyLogo}
-                className="sidebar-logo"
-                alt="rohitmungre"
-                title="💾"
-              />
-            </span>
             <span>Rohit Mungre</span>
           </Link>
         </div>
