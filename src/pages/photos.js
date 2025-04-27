@@ -37,9 +37,9 @@ export default function Photos() {
           title={title}
           description={
             <>
-              Below are a few selected photographs I’ve taken over the years. <br /> For more recent updates, feel free to follow me on{' '}
+              Below are a few selected photographs of mine over the years. <br /> For more recent updates, feel free to follow me on{' '}
               <a
-                href="https://instagram.com/yourusername"
+                href="https://instagram.com/rohitmungre"
                 target="_blank"
                 rel="noopener noreferrer"
               >

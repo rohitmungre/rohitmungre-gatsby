@@ -22,15 +22,15 @@ import floppyLogo from '../assets/happy.svg'
 export const Sidebar = () => {
   const guides = [
     {
-      url: '/modern%20python%20applications',
-      title: 'Modern Python Apps',
+      url: '/websockets',
+      title: 'Websockets & Rest',
       icon: python,
     },
-    {
-      url: '/asynchronous',
-      title: 'Async programming',
-      icon: sync,
-    },
+    // {
+    //   url: '/asynchronous',
+    //   title: 'Async programming',
+    //   icon: sync,
+    // },
     {
       url: '/wsl%20setup',
       title: 'WSL Setup for Devs',
@@ -90,22 +90,9 @@ export const Sidebar = () => {
             <h2>About Me</h2>
             <div className="sidebar-content">
               <p>
-                I'm <Link to="/me">Rohit</Link>, software engineer and
-                creator. This is my digital garden. 🌱
+                I'm <Link to="/me">Rohit</Link>, this is my digital garden. 🌱
               </p>
             </div>
-          </section>
-
-          <section className="sidebar-section">
-            <h2>Writeups</h2>
-            <nav className="sidebar-menu">
-              {projectWriteups.map((link) => (
-                <Link key={link.url} to={link.url} activeClassName="active">
-                  {link.icon && <img src={link.icon} alt={link.title} />}
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
           </section>
 
           <section className="sidebar-section">
