@@ -52,7 +52,7 @@ export default function Index({ data }) {
                 I enjoy sports, strength-training, cooking, 
                 and spending time with my partner and friends. 
                 I'm also trained in Indian classical music and occasionally <a href="/illustration"> draw</a>. 
-                More recently, I've been focused on health and have <a href="/weight%20loss"> lost 31 Kilograms </a> so far. 
+                More recently, I've been focused on health and have lost 31 Kilograms so far. 
               </p>
               <p className="flex gap">
                 <Link className="button" to="/me">
