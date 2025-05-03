@@ -69,7 +69,7 @@ export default function Index({ data }) {
               </p>
             </div>
             <div>
-              <img src="/bw_dp4.png" className="hero-image" alt="RAM Ram" />
+              <img src="/dpbw.jpg" className="hero-image" alt="RAM Ram" />
             </div>
           </div>
         </Hero>

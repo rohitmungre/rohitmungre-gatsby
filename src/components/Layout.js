@@ -58,14 +58,11 @@ export const Layout = ({ children }) => {
 
       <div id="layout" className="layout">
         <Navigation handleUpdateTheme={handleUpdateTheme} theme={theme} />
-        TEST1
         <Sidebar style={{ background: 'red', height: '100vh' }}/>
-        TEST2
         <div className="main-wrapper" id="introduction">
           <div className="main-container">{children}</div>
           <Footer />
         </div>
-        TEST3
       </div>
     </div>
   )

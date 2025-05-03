@@ -6,7 +6,7 @@ import github from '../assets/nav-github.png'
 
 const links = [
   { url: 'https://rohitmungre.substack.com', label: 'Email signup' },
-  { url: 'https://www.rohitmungre.com/rss.xml', label: 'RSS feed' },
+  // { url: 'https://www.rohitmungre.com/rss.xml', label: 'RSS feed' },
   { url: 'https://x.com/rohitmungre', label: 'Twitter' },
   { url: 'https://ko-fi.com/rohitmungre', label: 'Buy me a coffee' },
 ]
