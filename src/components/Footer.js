@@ -42,7 +42,7 @@ export const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
-        buildTime(formatString: "MMMM D, YYYY [at] h:mm A")
+        buildTime(formatString: "MMMM D, YYYY [at] h:mm A [UTC]")
       }
     }
   `)
