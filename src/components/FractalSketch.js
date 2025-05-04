@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Sketch from "react-p5";
 
-const FractalSketch = ({ selectedFractal }) => {
+const FractalSketch = ({ selectedFractal, treeConfig }) => {
   let canvasWidth = 600;
   let canvasHeight = 600;
 
@@ -23,10 +23,11 @@ const FractalSketch = ({ selectedFractal }) => {
   };
 
   const draw = (p5) => {
-    p5.background(255);
+    p5.clear(); // fully transparent canvas
 
-    if (selectedFractal === "Tree") {
-        drawTree(p5, p5.width / 2, p5.height, -90, p5.height / 6);
+    if (selectedFractal === "Tree" && treeConfig) {
+        const { depth, angle, lengthRatio, startLength } = treeConfig;
+        drawTree(p5, p5.width / 2, p5.height, -90, startLength, depth, angle, lengthRatio);    
     } else if (selectedFractal === "Sierpinski") {
       drawSierpinski(p5, canvasWidth / 2, 50, canvasWidth / 2.5);
     } else if (selectedFractal === "Mandelbrot") {
@@ -36,17 +37,19 @@ const FractalSketch = ({ selectedFractal }) => {
     }
   };
 
-  const drawTree = (p5, x, y, angle, length) => {
-    if (length < 5) return;
+    const drawTree = (p5, x, y, angleDeg, length, depth, branchAngle, lengthRatio) => {
+        if (depth === 0 || length < 2) return;
 
-    const x2 = x + length * Math.cos(p5.radians(angle));
-    const y2 = y + length * Math.sin(p5.radians(angle));
+        const x2 = x + length * Math.cos(p5.radians(angleDeg));
+        const y2 = y + length * Math.sin(p5.radians(angleDeg));
 
-    p5.stroke(0);
-    p5.line(x, y, x2, y2);
+        const headingColor = window.getComputedStyle(document.querySelector("h1")).color;
+        p5.stroke(headingColor);
+        // p5.stroke(0);
+        p5.line(x, y, x2, y2);
 
-    drawTree(p5, x2, y2, angle - 25, length * 0.7);
-    drawTree(p5, x2, y2, angle + 25, length * 0.7);
+        drawTree(p5, x2, y2, angleDeg - branchAngle, length * lengthRatio, depth - 1, branchAngle, lengthRatio);
+        drawTree(p5, x2, y2, angleDeg + branchAngle, length * lengthRatio, depth - 1, branchAngle, lengthRatio);
   };
 
   const drawSierpinski = (p5, x, y, len) => {
