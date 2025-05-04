@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Sketch from "react-p5";
 
-const FractalSketch = ({ selectedFractal, treeConfig }) => {
+const FractalSketch = ({ selectedFractal, treeConfig, sierpinskiConfig }) => {
   let canvasWidth = 600;
   let canvasHeight = 600;
 
@@ -27,9 +27,13 @@ const FractalSketch = ({ selectedFractal, treeConfig }) => {
 
     if (selectedFractal === "Tree" && treeConfig) {
         const { depth, angle, lengthRatio, startLength } = treeConfig;
-        drawTree(p5, p5.width / 2, p5.height, -90, startLength, depth, angle, lengthRatio);    
-    } else if (selectedFractal === "Sierpinski") {
-      drawSierpinski(p5, canvasWidth / 2, 50, canvasWidth / 2.5);
+        drawTree(p5, p5.width / 2, p5.height, -90, startLength, depth, angle, lengthRatio);  
+    } else if (selectedFractal === "Sierpinski" && sierpinskiConfig) {
+        const { depth } = sierpinskiConfig;
+        const baseY = p5.height - 10;
+        const baseLen = p5.width * 0.5;
+        const topY = baseY - (Math.sqrt(3) / 2) * baseLen;
+        drawSierpinski(p5, p5.width / 2, topY, baseLen, depth);             
     } else if (selectedFractal === "Mandelbrot") {
       drawMandelbrot(p5);
     }  else if (selectedFractal === "Koch") {
@@ -52,24 +56,24 @@ const FractalSketch = ({ selectedFractal, treeConfig }) => {
         drawTree(p5, x2, y2, angleDeg + branchAngle, length * lengthRatio, depth - 1, branchAngle, lengthRatio);
   };
 
-  const drawSierpinski = (p5, x, y, len) => {
+  const drawSierpinski = (p5, x, y, len, depth) => {
     const drawTriangle = (x, y, len) => {
       const h = (Math.sqrt(3) / 2) * len;
       p5.triangle(x, y, x - len / 2, y + h, x + len / 2, y + h);
     };
-
-    const sierpinski = (x, y, len) => {
-      if (len < 10) {
+  
+    const sierpinski = (x, y, len, d) => {
+      if (d <= 0 || len < 10) {
         drawTriangle(x, y, len);
         return;
       }
       const h = (Math.sqrt(3) / 2) * len;
-      sierpinski(x, y, len / 2);
-      sierpinski(x - len / 4, y + h / 2, len / 2);
-      sierpinski(x + len / 4, y + h / 2, len / 2);
+      sierpinski(x, y, len / 2, d - 1);
+      sierpinski(x - len / 4, y + h / 2, len / 2, d - 1);
+      sierpinski(x + len / 4, y + h / 2, len / 2, d - 1);
     };
-
-    sierpinski(x, y, len);
+  
+    sierpinski(x, y, len, depth);
   };
 
   const drawMandelbrot = (p5) => {
