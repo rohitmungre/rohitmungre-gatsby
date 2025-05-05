@@ -20,12 +20,15 @@ const PolarClock = () => {
     const format = d3.timeFormat("%H:%M:%S");
 
     const fields = [
-      { name: "second", interval: d3.timeSecond, color: "#d53e4f" },
-      { name: "minute", interval: d3.timeMinute, color: "#f46d43" },
-      { name: "hour",   interval: d3.timeHour,   color: "#fdae61" },
-      { name: "day",    interval: d3.timeDay,    color: "#fee08b" },
-      { name: "month",  interval: d3.timeMonth,  color: "#e6f598" },
+      { name: "second", max: 60, getter: d => d.getSeconds(), color: "#d53e4f" },
+      { name: "minute", max: 60, getter: d => d.getMinutes(), color: "#f46d43" },
+      { name: "hour",   max: 24, getter: d => d.getHours(),   color: "#fdae61" },
+      { name: "day",    max: 31, getter: d => d.getDate(),    color: "#fee08b" },
+      { name: "month",  max: 12, getter: d => d.getMonth() + 1, color: "#e6f598" }, // +1 to make Jan = 1
     ];
+
+    // Reverse so seconds are on outside
+    fields.reverse();
 
     fields.forEach((f, i) => (f.index = i));
 
@@ -40,14 +43,12 @@ const PolarClock = () => {
       .attr("dy", "0.35em");
 
     function arc(field, now) {
-      const start = field.interval.floor(now);
-      const end = field.interval.offset(start, 1);
-
+      const value = field.getter(now);
       return d3.arc()({
         innerRadius: field.index * 30 + 100,
         outerRadius: field.index * 30 + 128,
         startAngle: 0,
-        endAngle: 2 * Math.PI * ((now - start) / (end - start)),
+        endAngle: 2 * Math.PI * (value / field.max),
       });
     }
 
