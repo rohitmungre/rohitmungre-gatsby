@@ -10,15 +10,15 @@ import { SEO } from '../components/SEO'
 import { Heading } from '../components/Heading'
 import { Hero } from '../components/Hero'
 import { PageLayout } from '../components/PageLayout'
-// import { projectsList } from '../data/projectsList'
+import { projectsList } from '../data/projectsList'
 import { getSimplifiedPosts } from '../utils/helpers'
 import config from '../utils/config'
 
 export default function Index({ data }) {
-  const latestNotes = data.latestNotes.edges
+  // const latestNotes = data.latestNotes.edges
   const latestArticles = data.latestArticles.edges
   const highlights = data.highlights.edges
-  const notes = useMemo(() => getSimplifiedPosts(latestNotes), [latestNotes])
+  // const notes = useMemo(() => getSimplifiedPosts(latestNotes), [latestNotes])
 
   const articles = useMemo(
     () => getSimplifiedPosts(latestArticles),
@@ -94,6 +94,54 @@ export default function Index({ data }) {
           <Posts data={articles} newspaper />
         </section>
 
+        <section>
+          <Heading
+            title="Projects"
+            slug="/labs"
+            buttonText="All Projects"
+            description="Open-source projects I've worked on over the years."
+          />
+
+          <div className="cards">
+            {projectsList
+              .filter((project) => project.highlight)
+              .map((project) => {
+                return (
+                  <div className="card" key={`hightlight-${project.slug}`}>
+                    <time>{project.date}</time>
+                    <a
+                      href={`https://github.com/rohitmungre/${project.slug}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {project.name}
+                    </a>
+                    <p>{project.tagline}</p>
+                    <div className="card-links">
+                      {project.writeup && (
+                        <Link className="button small" to={project.writeup}>
+                          Article
+                        </Link>
+                      )}
+                      <a
+                        className="button small"
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Demo
+                      </a>
+                    </div>
+                  </div>
+                )
+              })}
+          </div>
+        </section>
+
+        <br />
+        <br />
+        <br />
+
         <section className="section-index">
           <Heading
             title="Deep Dives"
@@ -119,50 +167,6 @@ export default function Index({ data }) {
           </div>
         </section>
 
-        {/* <section>
-          <Heading
-            title="Projects"
-            slug="/projects"
-            buttonText="All Projects"
-            description="Open-source projects I've worked on over the years."
-          /> */}
-
-          {/* <div className="cards">
-            {projectsList
-              .filter((project) => project.highlight)
-              .map((project) => {
-                return (
-                  <div className="card" key={`hightlight-${project.slug}`}>
-                    <time>{project.date}</time>
-                    <a
-                      href={`https://github.com/rohitmungre/${project.slug}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {project.name}
-                    </a>
-                    <p>{project.tagline}</p>
-                    <div className="card-links">
-                      {project.writeup && (
-                        <Link className="button small" to={project.writeup}>
-                          Article
-                        </Link>
-                      )}
-                      <a
-                        className="button small"
-                        href={project.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Demo
-                      </a>
-                    </div>
-                  </div>
-                )
-              })}
-          </div> */}
-
-        {/* </section> */}
       </PageLayout>
     </>
   )
