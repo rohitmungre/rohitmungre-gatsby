@@ -1987,6 +1987,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lottiefiles/dotlottie-react@npm:^0.13.5":
+  version: 0.13.5
+  resolution: "@lottiefiles/dotlottie-react@npm:0.13.5"
+  dependencies:
+    "@lottiefiles/dotlottie-web": "npm:0.44.0"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+  checksum: 10c0/fd6f47a7308eb6b584e06e50e36a80258efe542019118a7b0d4f66b1016837ed4cba92ba6183a44ac7f951ae270baa4662ce725181ccf2edcc93081b85d148bc
+  languageName: node
+  linkType: hard
+
+"@lottiefiles/dotlottie-web@npm:0.44.0":
+  version: 0.44.0
+  resolution: "@lottiefiles/dotlottie-web@npm:0.44.0"
+  checksum: 10c0/b6454236b3310ca46bc9751041dbab29742a6fd45f6e1f3452bca2217f668b91c4d0ebd55bb99ef98a79a8e4bb52db51721f352b8a1c010447152241d0ac974e
+  languageName: node
+  linkType: hard
+
 "@mischnic/json-sourcemap@npm:^0.1.0":
   version: 0.1.1
   resolution: "@mischnic/json-sourcemap@npm:0.1.1"
@@ -8202,6 +8220,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-yarn@workspace:."
   dependencies:
+    "@lottiefiles/dotlottie-react": "npm:^0.13.5"
     "@reach/router": "npm:^1.3.4"
     d3: "npm:^7.9.0"
     gatsby: "npm:^5.14.1"
@@ -8221,6 +8240,8 @@ __metadata:
     gatsby-transformer-remark: "npm:^6.14.0"
     gatsby-transformer-sharp: "npm:^5.14.0"
     leaflet: "npm:^1.9.4"
+    lottie-react: "npm:^2.4.1"
+    lottie-web: "npm:^5.12.2"
     postcss: "npm:^8.5.3"
     prismjs: "npm:^1.30.0"
     query-string: "npm:^9.1.1"
@@ -10447,6 +10468,25 @@ __metadata:
   bin:
     loose-envify: cli.js
   checksum: 10c0/655d110220983c1a4b9c0c679a2e8016d4b67f6e9c7b5435ff5979ecdb20d0813f4dec0a08674fcbdd4846a3f07edbb50a36811fd37930b94aaa0d9daceb017e
+  languageName: node
+  linkType: hard
+
+"lottie-react@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "lottie-react@npm:2.4.1"
+  dependencies:
+    lottie-web: "npm:^5.10.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/7f6a0a2cf2af25deabe7b4d4c9917e47d12016673613c59dcdd8ef52e10e914dd0c1f71d4a275d56aaba03fe9d85b333087f7c8d40a8f967ece4a0444c7a3cdf
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.10.2, lottie-web@npm:^5.12.2":
+  version: 5.12.2
+  resolution: "lottie-web@npm:5.12.2"
+  checksum: 10c0/0aeaf631b10a76afd025df70c2a1486543530708e07a316946c08e55891dac483ffbaf2bf3648ae0b9c54c733118a0a086fd150aa76f7848606214c67ad72c30
   languageName: node
   linkType: hard
 
