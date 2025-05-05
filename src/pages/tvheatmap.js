@@ -8,7 +8,7 @@ import { PageLayout } from '../components/PageLayout'
 import config from '../utils/config'
 
 export default function TVChart() {
-    const title = 'Stock Heatmap';      
+    const title = 'Stock Market Heatmap';      
     const containerRef = useRef();
 
     useEffect(() => {
@@ -38,6 +38,8 @@ export default function TVChart() {
             title={title}
           />
 
+        <p>The heatmap is a treemap-style visualization where each block represents a stock, 
+            with size based on market cap and color indicating daily price change, offering a quick snapshot of market performance.</p>
         <div className="tradingview-widget-container" ref={containerRef} />
         
         </PageLayout>

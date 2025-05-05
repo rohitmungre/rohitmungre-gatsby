@@ -22,6 +22,8 @@ export default function TicTacToePage() {
             title={title}
           />
 
+        <p>Tic Tac Toe is a classic two-player strategy game where players take turns marking X or O 
+          in a 3×3 grid, aiming to align three symbols in a row to win.</p>
         <TicTacToe />
 
         </PageLayout>

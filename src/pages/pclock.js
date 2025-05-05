@@ -22,6 +22,8 @@ export default function PClock() {
             title={title}
           />
 
+        <p>The Polar Clock is a dynamic circular visualization that represents time using 
+            concentric arcs for seconds, minutes, hours, days, and months in a visually engaging radial format.</p>
         <PolarClock />
         
         </PageLayout>
