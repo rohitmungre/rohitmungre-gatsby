@@ -96,6 +96,12 @@ export const Footer = () => {
 
         <div className="footer-item">
           <div className="footer-item-left">
+            Template by <a href="https://github.com/taniarascia">Tania Rascia</a>
+          </div>
+        </div>
+
+        <div className="footer-item">
+          <div className="footer-item-left">
             Last build: {data.site.buildTime}
           </div>
         </div>

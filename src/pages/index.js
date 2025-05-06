@@ -49,9 +49,8 @@ export default function Index({ data }) {
                 hedge funds, commodity trading, and gaming.
               </p>
               <p className="hero-description">
-                I enjoy sports, strength-training, cooking, 
-                and spending time with my partner and friends. 
-                I'm also trained in Indian classical music and occasionally <a href="/illustration"> draw</a>. 
+                I enjoy sports, strength-training, cooking, and occasionally also indulge in
+                <a href="/illustration"> art</a>. I'm also trained in Indian classical music. 
                 More recently, I've been focused on health and have lost 31 Kilograms so far. 
               </p>
               <p className="flex gap">
@@ -96,10 +95,10 @@ export default function Index({ data }) {
 
         <section>
           <Heading
-            title="Projects"
+            title="Labs"
             slug="/labs"
             buttonText="All Projects"
-            description="Open-source projects I've worked on over the years."
+            description="Simple UI experiments - visualizations, trading charts, & animations"
           />
 
           <div className="cards">
@@ -110,7 +109,7 @@ export default function Index({ data }) {
                   <div className="card" key={`hightlight-${project.slug}`}>
                     <time>{project.date}</time>
                     <a
-                      href={`https://github.com/rohitmungre/${project.slug}`}
+                      href={project.demo}
                       target="_blank"
                       rel="noreferrer"
                     >
