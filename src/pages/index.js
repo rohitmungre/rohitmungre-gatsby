@@ -95,10 +95,10 @@ export default function Index({ data }) {
 
         <section>
           <Heading
-            title="Labs"
+            title="Lab"
             slug="/labs"
             buttonText="All Projects"
-            description="Simple UI experiments - visualizations, trading charts, & animations"
+            description="UI experiments - visualizations, trading charts, & animations"
           />
 
           <div className="cards">

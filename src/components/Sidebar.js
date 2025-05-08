@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import floppy from '../assets/luffy.png'
 import book from '../../content/thumbnails/book.svg'
 import run from '../../content/thumbnails/run.svg'
+import stock from '../../content/thumbnails/stock.svg'
+import market from '../../content/thumbnails/market-watch.svg'
 import gaming from '../../content/thumbnails/gaming.svg'
 import search from '../../content/thumbnails/search.svg'
 import oil from '../../content/thumbnails/oil.svg'
@@ -21,11 +23,6 @@ import floppyLogo from '../assets/happy.svg'
 
 export const Sidebar = () => {
   const guides = [
-    {
-      url: '/websockets',
-      title: 'Websockets & Rest',
-      icon: python,
-    },
     // {
     //   url: '/asynchronous',
     //   title: 'Async programming',
@@ -37,8 +34,31 @@ export const Sidebar = () => {
       icon: windows,
     },
     {
+      url: '/websockets',
+      title: 'Websockets & Rest',
+      icon: python,
+    },
+    {
       url: '/topics',
       title: 'All Topics',
+    },
+  ]
+
+
+  const labs = [
+    {
+      url: '/market',
+      title: 'Market Watch',
+      icon: market,
+    },
+    {
+      url: '/equities',
+      title: 'Equities Insights',
+      icon: stock,
+    },
+    {
+      url: '/labs',
+      title: 'All projects',
     },
   ]
 
@@ -93,6 +113,22 @@ export const Sidebar = () => {
                 I'm <Link to="/me">Rohit</Link>, this is my digital garden. 🌱
               </p>
             </div>
+          </section>
+
+          <section className="sidebar-section">
+            <h2>Labs</h2>
+            <nav className="sidebar-menu">
+              {labs.map((link) => (
+                <Link key={link.url} to={link.url} activeClassName="active">
+                  {link.icon ? (
+                    <img src={link.icon} alt={link.title} />
+                  ) : (
+                    <div style={{ height: '16px', width: '16px' }} />
+                  )}
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
           </section>
 
           <section className="sidebar-section">

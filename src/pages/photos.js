@@ -9,18 +9,18 @@ import config from '../utils/config'
 
 
 const images = [
-  { url: '/photos/thames-kayak.jpg', title: 'Big Ben' },
-  { url: '/photos/sunset-hoola.jpg', title: 'Calvin & Hobbs' },
-  { url: '/photos/seagull.jpg', title: 'Mother earth' },
-  { url: '/photos/seven-sisters.jpg', title: 'Girl' },
-  { url: '/photos/cornwall.jpg', title: 'Colorful Skull' },
-  { url: '/photos/paris-sunset.jpg', title: 'Joker' },
-  { url: '/photos/rainy-day.jpg', title: 'Joker' },
-  { url: '/photos/notting-hill.jpg', title: 'Joker' },
-  { url: '/photos/sunset-hoola.jpg', title: 'Joker' },
-  { url: '/photos/edi-2.jpg', title: 'Joker' },
-  { url: '/photos/eiffel.jpg', title: 'Joker' },
-  { url: '/photos/hyde-park.jpg', title: 'Joker' },
+  { url: '/photos/thames-kayak.jpg', title: 'Kayaking on the Thames' },
+  { url: '/photos/sunset-hoola.jpg', title: 'Sunset at O2' },
+  { url: '/photos/seagull.jpg', title: 'Sunny afternoon' },
+  { url: '/photos/seven-sisters.jpg', title: 'Seven Sisters' },
+  { url: '/photos/cornwall.jpg', title: 'Minack Theatre' },
+  { url: '/photos/paris-sunset.jpg', title: 'Eiffel at Sunset' },
+  { url: '/photos/rainy-day.jpg', title: 'Canary Wharf' },
+  { url: '/photos/notting-hill.jpg', title: 'Notting Hill' },
+  { url: '/photos/rajwada.jpg', title: 'Indore Rajwada' },
+  { url: '/photos/edi-2.jpg', title: 'Edinburgh Monument' },
+  { url: '/photos/eiffel.jpg', title: 'Illuminated Eiffel' },
+  { url: '/photos/hyde-park.jpg', title: 'Hyde Park' },
 ]
 
 
@@ -54,7 +54,7 @@ export default function Photos() {
             return (
               <div className="card" key={image.url}>
                 <a href={image.url} target="_blank" rel="noreferrer">
-                  {/* <div>{image.title}</div> */}
+                  <div>{image.title}</div>
 
                   <div
                     className="image-thumbnail"

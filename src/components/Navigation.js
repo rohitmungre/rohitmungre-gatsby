@@ -14,6 +14,7 @@ import { Close } from '../assets/Close'
 
 const links = [
   // { url: '/notes', label: 'Notes', image: null },
+  { url: '/labs', label: 'Lab', image: null },
   { url: '/blog', label: 'Blog', image: null },
   { url: '/me', label: 'About', image: null },
 ]

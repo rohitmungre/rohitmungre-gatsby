@@ -13,7 +13,7 @@ import { projectsList } from '../data/projectsList'
 export default function Projects() {
   const title = 'Labs'
   const description =
-    'My UI experiments - visualizations, trading charts, & animations.'
+    'UI experiments - visualizations, trading charts, & animations.'
 
   return (
     <>
